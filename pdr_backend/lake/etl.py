@@ -320,14 +320,14 @@ class ETL:
         # st_timestamp and fin_timestamp should be valid UnixTimeMS
         st_timestamp, fin_timestamp = self._calc_bronze_start_end_ts()
 
-        for table_name, get_data_func in self.bronze_table_getters.items():
-            get_data_func(
+        for table_name, _do_table_etl_sql_func in self.bronze_table_getters.items():
+            _do_table_etl_sql_func(
                 path=self.ppss.lake_ss.lake_dir,
                 st_ms=st_timestamp,
                 fin_ms=fin_timestamp,
             )
 
-            logger.info("update_bronze_pdr - Inserting data into %s", table_name)
+            logger.info("update_bronze_pdr - Processing table [%s]", table_name)
 
             # For each bronze table that we process, that data will be entered into TEMP
             # Create view so downstream queries can access production + TEMP data
