@@ -28,7 +28,7 @@ First, acquire ROSE at an exchange like Binance, Coinbase, Gate.io, or KuCoin. F
 Then, you'll be withdrawing ROSE to your web3 wallet.
 
 - If the exchange supports withdrawal directly to Oasis Sapphire Paratime: great, do that directly! Then you can skip step 3.
-- It it doesn't support direct: first, send to Oasis Emerald Network. Then, follow step 3.
+- If it doesn't support direct: first, send to Oasis Emerald Network. Then, follow step 3.
 
 ⚠️ Sending to the wrong address or network will likely result in the loss of your tokens. To minimize risk: send a small test amount first, and double-check the receiving address and network.
 
@@ -45,7 +45,7 @@ Then, import it into the Oasis wallet extension:
 
 Now, let's check your EVM wallet's ROSE balance, via the Oasis wallet extension.
 
-1. There's a circle on the top-right corner. Click it. Now it shows all your Oasis-native _and_ EVM-native accounts.
+1. There's a circle at the top-right corner. Click it. Now it shows all your Oasis-native _and_ EVM-native accounts.
 2. Select your EVM account by clicking on it. Now it has a green check next to it.
 3. On the app's very top-left (you may need to scroll), click the left-pointing arrow. Now it shows your EVM account's summary.
 4. Click "ParaTimes". Now it shows ROSE balance in each ParaTime for each. Note that your Sapphire account has 0.0 ROSE.
@@ -62,7 +62,7 @@ Here, we use the Oasis wallet extension to transfer ROSE from your Oasis-native 
 
 To verify that the tx went through:
 
-- Verify "withdraw" side: in Oasis wallet, in the Oasis account you sent from, in its tx history, click on the most recent tx. Copy the the txHash value. Finally, go to [oasisscan.com](https://www.oasisscan.com/) and paste in the txHash value.
+- Verify "withdraw" side: in Oasis wallet, in the Oasis account you sent from, in its tx history, click on the most recent tx. Copy the txHash value. Finally, go to [oasisscan.com](https://www.oasisscan.com/) and paste in the txHash value.
 - But note that its "to" address is an oasis address, _not_ your EVM address. This address is the middleman bridge from your Oasis-native sending account to your EVM-native receiving account. So we still need to verify the "deposit" side, in the EVM account.
 - Verify "deposit" side: via the Oasis wallet extension, check your EVM wallet's balance as described above). The balance should have increased by the amount of ROSE that you sent.
 
